@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>hexo博客搭建 - 变量的博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Delta,"> 
+    <meta name="description" content="写一下自己搭建博客使用的工具和方法，作为自己的第二篇博客。这里使用的是hexo来搭建博客，利用插件实现博客的评论和计数功能。
+hexo博客搭建笔记依赖环境的安装node环境的安装一般推荐node使用,"> 
+    <meta name="author" content="Deltavra"> 
+    <link rel="alternative" href="atom.xml" title="变量的博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">变量的博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://yoursite.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">hexo博客搭建</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/个人杂项"><b>「
+                    </b>个人杂项<b> 」</b></a>
+                
+                July 20, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/07/20/hexo-blog/" title="hexo博客搭建" class="">hexo博客搭建</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    3k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    5 mins.
+                </span>
+                
+                
+                <span id="/2020/07/20/hexo-blog/" class="leancloud_visitors" data-flag-title="hexo博客搭建">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>写一下自己搭建博客使用的工具和方法，作为自己的第二篇博客。<br>这里使用的是hexo来搭建博客，利用插件实现博客的评论和计数功能。</p>
+<h1 id="hexo博客搭建笔记"><a href="#hexo博客搭建笔记" class="headerlink" title="hexo博客搭建笔记"></a>hexo博客搭建笔记</h1><h2 id="依赖环境的安装"><a href="#依赖环境的安装" class="headerlink" title="依赖环境的安装"></a>依赖环境的安装</h2><h3 id="node环境的安装"><a href="#node环境的安装" class="headerlink" title="node环境的安装"></a>node环境的安装</h3><p>一般推荐node使用官方网站的方法进行安装和更新，这里放一下<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node官网</a></p>
+<p>我使用的是ubuntu，所以常见的更新方法就是在使用终端命令来安装npm专有的node版本管理模块。</p>
+<pre><code class="bash">npm instal -g n
+n stable</code></pre>
+<p>当然这里有一个问题就是国内的nmp下载可能受到多重因素的影响，比较emmmm，所以这里推荐使用一个cnpm淘宝源。</p>
+<pre><code class="bash">npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
+<p>这里的cnpm以后就可以替代npm进行工作啦，用法和普通的npm语法一样例如<code>cnpm info connect</code>。</p>
+<p>安装完毕的话，使用</p>
+<pre><code class="bash">node --version</code></pre>
+<p>来检验一下安装是否成功吧。</p>
+<h3 id="git环境的安装"><a href="#git环境的安装" class="headerlink" title="git环境的安装"></a>git环境的安装</h3><p>一般我们使用apt命令即可安装git及其依赖</p>
+<pre><code class="bash">sudo apt install git-all</code></pre>
+<p>同样在安装之后检查一下。</p>
+<pre><code class="bash">git --version</code></pre>
+<h3 id="hexo环境的安装"><a href="#hexo环境的安装" class="headerlink" title="hexo环境的安装"></a>hexo环境的安装</h3><p>这里直接使用npm命令来安装hexo博客平台</p>
+<pre><code>npm install hexo-cli -g</code></pre><p>或者按照上面安装了cnpm的同学也可以使用这个命令安装</p>
+<pre><code class="bash">cnpm install hexo-cli -g</code></pre>
+<h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><p>鉴于hexo的自带主题非常丑，所以这里也讲一下主题的安装。首先我们需要新建一个文件夹，这里以后就作为你的博客文件夹了，以后你的博客就是在这个目录里面建立起来的。进入文件夹，使用</p>
+<pre><code class="bash">hexo init</code></pre>
+<p>这个命令会在这里初始化博客文件夹，之后这里就可以clone其他的主题文件来修改博客主题了。这里推荐一个<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a>网站，点开你喜欢的网站的github即可找到这个主题的克隆链接。</p>
+<p>在命令行执行克隆链接，我这里以我网站使用的主题obsidian为例。</p>
+<pre><code class="bash">git clone https://github.com/TriDiamond/hexo-theme-obsidian.git theme/obsidian</code></pre>
+<p>然后执行</p>
+<pre><code class="bash">npm install</code></pre>
+<p>或者</p>
+<pre><code class="bash">cnpm install</code></pre>
+<p>补充一下可能遗漏的依赖包，这样主题就可以使用了。</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><h3 id="对博客页面配置文件的修改"><a href="#对博客页面配置文件的修改" class="headerlink" title="对博客页面配置文件的修改"></a>对博客页面配置文件的修改</h3><p>这里修改的配置文件就是我们的博客主文件夹下的_config.yml文件。<br>在主文件夹打开终端，输入：</p>
+<pre><code class="bash">vim _config.yml</code></pre>
+<p>在vim打开配置文件，然后编辑其内容</p>
+<pre><code># 省略上面的内容
+theme: obsidian</code></pre><p>然后使用hexo生成并且使用本地服务进行预览即可</p>
+<pre><code class="bash">hexo generate
+hexo server</code></pre>
+<h3 id="对主题配置文件的修改"><a href="#对主题配置文件的修改" class="headerlink" title="对主题配置文件的修改"></a>对主题配置文件的修改</h3><p>打开obsidian文件夹下可以看到这里有另外一个_config.yml文件，这就是我们要修改的主题配置文件。</p>
+<pre><code class="bash">cd themes/obsidian
+vim _config.yml</code></pre>
+<p>这里的修改可以参照同目录下的readme-cn文件</p>
+<h2 id="博客的推送"><a href="#博客的推送" class="headerlink" title="博客的推送"></a>博客的推送</h2><p>完成搭建后就可以通过github进行推送了。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Deltavra</p>
+                    <span>The best way to model the world is to understand how it works</span>
+                    <dl>
+                        <dd><a href="https://github.com/deltavra" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/deltavarity" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/13958576/deltavra?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">2 <p>Articles</p></a></li>
+                    <li><a href="/categories">1 <p>Categories</p></a></li>
+                    <li><a href="/tags">2 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo博客搭建笔记"><span class="toc-number">1.</span> <span class="toc-text">hexo博客搭建笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖环境的安装"><span class="toc-number">1.1.</span> <span class="toc-text">依赖环境的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#node环境的安装"><span class="toc-number">1.1.1.</span> <span class="toc-text">node环境的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git环境的安装"><span class="toc-number">1.1.2.</span> <span class="toc-text">git环境的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo环境的安装"><span class="toc-number">1.1.3.</span> <span class="toc-text">hexo环境的安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题安装"><span class="toc-number">1.2.</span> <span class="toc-text">主题安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改配置文件"><span class="toc-number">1.3.</span> <span class="toc-text">修改配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对博客页面配置文件的修改"><span class="toc-number">1.3.1.</span> <span class="toc-text">对博客页面配置文件的修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对主题配置文件的修改"><span class="toc-number">1.3.2.</span> <span class="toc-text">对主题配置文件的修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客的推送"><span class="toc-number">1.4.</span> <span class="toc-text">博客的推送</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Deltavra
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.4" target="_blank" rel="noopener">v1.4.4</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['The best way to model the world is to understand how it works', '只有理解世界的原理,才能掌握自己的命运'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+ 
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var valine = new Valine();
+
+  function initValine(path) {
+    if (!path) path = window.location.pathname;
+    let language = 'zh';
+    if (!language) {
+      language = 'en';
+    } else {
+      language = language.toLowerCase();
+    }
+    valine.init({
+      el: '#vcomments',
+      appId: 'AKk9vtADGVtc6xwaefTde0uh-gzGzoHsz',
+      appKey: 'xSQ7wEDMmui1pKCd8t1bsvfw',
+      notify: 'false',
+      verify: 'false',
+      avatar: 'mp',
+      placeholder: 'Leave your throughs behind~',
+      visitor: 'true',
+      path: path,
+      lang: language,
+    });
+  }
+
+  $(document).ready(function () {
+    initValine();
+  });
+</script>
+
+
+
+</html>
